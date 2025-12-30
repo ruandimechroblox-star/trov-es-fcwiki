@@ -19,14 +19,13 @@
     </style>
 </head>
 <body>
-    <iframe id="contentFrame" src="https://app.emergent.sh/loading-preview?host=trovoes-fc.preview.emergentagent.com" allowfullscreen></iframe>
     <script>
         // Listen for messages from the iframe
         window.addEventListener('message', function(event) {
 
         	console.log(event.origin);
             // Optional: Add origin check for security
-            // if (!['https://dev.emergentagent.com', 'https://app.emergent.sh'].includes(event.origin)) return;
+            // if (![''].includes(event.origin)) return;
 
             if (event.data && event.data.type === 'reload') {
                 const iframe = document.getElementById('contentFrame');
